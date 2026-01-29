@@ -9,4 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/students', [StudentController::class, 'index']);
-Route::get('/students', [StudentController::class, 'store']);
+Route::post('/students/save', [StudentController::class, 'store_student']);
